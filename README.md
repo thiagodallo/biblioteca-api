@@ -3,7 +3,7 @@
 Uma API de biblioteca que expõe os mesmos casos de uso por **REST** e por **gRPC**, organizada em camadas **Apresentação → Domínio → Repositório**.
 
 - **EQUIPE:** Thiago Dallo, Vinicius Fabris, Cauã Rodrigues e Murilo Cambruzzi.
-- **DISCIPLINA:** Projeto Integrador: Sistema Web
+- **DISCIPLINA:** Arquitetura de Software
 - **CURSO:** Engenharia de Software - 4ª fase
 - **FACULDADE:** UniSATC
 
