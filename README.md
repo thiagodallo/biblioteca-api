@@ -1,8 +1,11 @@
 # Biblioteca API
 
-Trabalho de Arquitetura de Software: uma API de biblioteca que expõe os mesmos casos de uso por **REST** e por **gRPC**, organizada em camadas **Apresentação → Domínio → Repositório**.
+Uma API de biblioteca que expõe os mesmos casos de uso por **REST** e por **gRPC**, organizada em camadas **Apresentação → Domínio → Repositório**.
 
-**Grupo:** Thiago, Murilo, Cauã e Vinicius
+- **EQUIPE:** Thiago Dallo, Vinicius Fabris, Cauã Rodrigues e Murilo Cambruzzi.
+- **DISCIPLINA:** Projeto Integrador: Sistema Web
+- **CURSO:** Engenharia de Software - 4ª fase
+- **FACULDADE:** UniSATC
 
 ## Domínio
 
