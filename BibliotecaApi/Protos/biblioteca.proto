@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+option csharp_namespace = "BibliotecaApi.Grpc.Contratos";
+
+package biblioteca;
+
+import "google/protobuf/empty.proto";
+
+service Autores {
+  rpc Listar (google.protobuf.Empty) returns (ListaAutoresReply);
+  rpc Obter (AutorIdRequest) returns (AutorReply);
+  rpc Criar (AutorDadosRequest) returns (AutorReply);
+  rpc Atualizar (AtualizarAutorRequest) returns (AutorReply);
+  rpc Excluir (AutorIdRequest) returns (google.protobuf.Empty);
+}
+
+service Livros {
+  rpc Listar (ListarLivrosRequest) returns (ListaLivrosReply);
+  rpc Obter (LivroIdRequest) returns (LivroReply);
+  rpc Criar (LivroDadosRequest) returns (LivroReply);
+  rpc Atualizar (AtualizarLivroRequest) returns (LivroReply);
+  rpc Excluir (LivroIdRequest) returns (google.protobuf.Empty);
+}
+
+message AutorIdRequest {
+  int32 id = 1;
+}
+
+message AutorDadosRequest {
+  string nome = 1;
+  string nacionalidade = 2;
+  optional bool ativo = 3;
+}
+
+message AtualizarAutorRequest {
+  int32 id = 1;
+  string nome = 2;
+  string nacionalidade = 3;
+  optional bool ativo = 4;
+}
+
+message AutorReply {
+  int32 id = 1;
+  string nome = 2;
+  string nacionalidade = 3;
+  bool ativo = 4;
+}
+
+message ListaAutoresReply {
+  repeated AutorReply autores = 1;
+}
+
+message LivroIdRequest {
+  int32 id = 1;
+}
+
+// autor_id = 0 lista os livros de todos os autores
+message ListarLivrosRequest {
+  int32 autor_id = 1;
+}
+
+message LivroDadosRequest {
+  string titulo = 1;
+  string isbn = 2;
+  int32 ano_publicacao = 3;
+  int32 autor_id = 4;
+}
+
+message AtualizarLivroRequest {
+  int32 id = 1;
+  string titulo = 2;
+  string isbn = 3;
+  int32 ano_publicacao = 4;
+  int32 autor_id = 5;
+}
+
+message LivroReply {
+  int32 id = 1;
+  string titulo = 2;
+  string isbn = 3;
+  int32 ano_publicacao = 4;
+  int32 autor_id = 5;
+  string autor_nome = 6;
+}
+
+message ListaLivrosReply {
+  repeated LivroReply livros = 1;
+}
